@@ -1,0 +1,76 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/dse-schedule.rpy", line 73, in script
+    python:
+  File "game/dse-schedule.rpy", line 78, in <module>
+    renpy.input("{font=arial.ttf} Ya que no elegiste nombre, yo te bautizo como el santo evangelio: {/font} {color=#30b6ea}Juan{/color}")
+Exception: Could not find font u'arial.ttf'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/dse-schedule.rpy", line 73, in script
+    python:
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\ast.py", line 881, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\python.py", line 1913, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/dse-schedule.rpy", line 78, in <module>
+    renpy.input("{font=arial.ttf} Ya que no elegiste nombre, yo te bautizo como el santo evangelio: {/font} {color=#30b6ea}Juan{/color}")
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\exports.py", line 847, in input
+    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 2672, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 3158, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 2075, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 487, in renpy.display.render.render_screen
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\screen.py", line 669, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 1124, in render
+    st, at)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 925, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\text.py", line 1899, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\text.py", line 587, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\text.py", line 240, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\font.py", line 695, in get_font
+    face = load_face(fn)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\font.py", line 636, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font u'arial.ttf'.
+
+Windows-8-6.2.9200
+Ren'Py 7.1.3.1092
+Dating Sim Engine 4.0
+Mon Jan 28 00:44:02 2019
