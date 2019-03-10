@@ -22,9 +22,12 @@
 define pj = Character("[pjname]", color="#30b6ea")
 define laura = Character("Laura", color="#ea308e")
 # Characters Images define here
-image Laura Normal Stand = im.Scale("LaurenCasualStandNormal.png", 302, 640)
 image Laura Normal Close = im.Scale("LaurenCasualCloseNormal.png", 302, 640)
-image Laura Angry Close = im.Scale("LaurenCasualCloseAngry.png", 302, 640)
+image Laura Normal Close Eyes = im.Scale("LaurenCasualCloseEyes.png", 302, 640)
+image Laura Angry Close = im.Scale("LaurenCasualCloseAngry.png", 302, 640) 
+image Laura Normal Stand = im.Scale("LaurenCasualStandNormal.png", 302, 640)
+
+
 # Background Images define here
 image bg space = "backgrounds/space.jpg"
 image bg sky = "backgrounds/sky.jpg"
@@ -68,7 +71,8 @@ label start:
     # The script here is run before any event.
     
 
-    "Los primeros rayos del sol anuncian la primavera\n estacion que hace alegrar mi juventud"
+    "Los primeros rayos del sol anuncian la primavera\n estacion que vibra en consonancia con mi entrada en la madurez"
+
 
     python:
         pjname = renpy.input("mi nombre es")
@@ -78,22 +82,29 @@ label start:
             renpy.input("{i} Ya que no elegiste nombre, yo te bautizo como el santo evangelio: {/i} {color=#30b6ea}Juan{/color}")
             pjname = "Juan"
 
-    pj "Siento que hoy es un dia especial, aunque no tengo como argumentarlo, quizás es solo el buen clima quien me carga de tanto optimismo"
+    pj "Presiento que hoy será un dia especial, aunque no tengo como argumentarlo, quizás es solo el buen clima quien me carga de tanto optimismo"
     pj "el parque esta bastante cerca, es ahí hacia donde me dirijo"     
     
     show Laura Normal Close
     with fade
     laura "Hey, tú ... pensé que ya no despertarías, [pjname] ... ¡marmota!"
+    show Laura Normal Close Eyes
     "Esta blonda pesadilla de voz estridente es Laura, nos conocemos desde niños"
+    show Laura Normal Close  
     "Su belleza es inversamente proporcional su capacidad de irritar al objetivo de su conversación ..."
+    show Laura Normal Close Eyes
     "Es innegablemente bella, asi como molesta ..."
+    show Laura Normal Close
     "10 años de conocerla hacen que te quedes con lo último"
+    show Laura Normal Close Eyes    
     pj "De pesadilla en pesadilla ..."
+    show Laura Normal Close
     pj "¿Puedo saber por que alteras mi paz, esbirro del infierno?"
+    show Laura Normal Close Eyes
     "Olvide agregar que su sentido del humor es practicamente inexistente"
-    show Laura Angry Close
-    laura "Esbi...¡¿queeeeé?! ¿Me has visto cara de algunos de tus amigotes para tratarme asi?"
-    pj "Oh, Señor... aqui vamos de nuevo ..."
+    show Laura Normal Close
+    "..."
+    
 
 
     # We jump to day to start the first day.
