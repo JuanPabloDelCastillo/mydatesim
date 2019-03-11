@@ -87,23 +87,23 @@ label start:
     
     show Laura Normal Close
     with fade
-    laura "Hey, tú ... pensé que ya no despertarías, [pjname] ... ¡marmota!"
+    laura "Pst! ... hey, [pjname] ... acaso soy transparente?"
     show Laura Normal Close Eyes
     "Esta blonda pesadilla de voz estridente es Laura, nos conocemos desde niños"
     show Laura Normal Close  
-    "Su belleza es inversamente proporcional su capacidad de irritar al objetivo de su conversación ..."
+    "Su belleza es directamente proporcional a su capacidad de irritar al objetivo durante una conversación ..."
     show Laura Normal Close Eyes
-    "Es innegablemente bella, asi como molesta ..."
+    "basicamente lo que trato de decir es que innegablemente bella, asi como molesta ..."
     show Laura Normal Close
     "10 años de conocerla hacen que te quedes con lo último"
     show Laura Normal Close Eyes    
-    pj "De pesadilla en pesadilla ..."
+    pj "Aqui se termina mi suerte ..."
     show Laura Normal Close
     pj "¿Puedo saber por que alteras mi paz, esbirro del infierno?"
     show Laura Normal Close Eyes
     "Olvide agregar que su sentido del humor es practicamente inexistente"
     show Laura Normal Close
-    "..."
+    "...."
     
 
 
