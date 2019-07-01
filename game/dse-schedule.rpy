@@ -41,18 +41,18 @@ init python:
     register_stat("Intelligence", "intelligence", 10, 100)
     register_stat("Relaxation", "relaxation", hidden=True)
 
-    dp_period("Morning", "morning_act")
+    dp_period("Mañana", "morning_act")
     dp_choice("Attend Class", "class")
     dp_choice("Cut Class", "cut")
     
     # This is an example of an event that should only show up under special circumstances
     dp_choice("Fly to the Moon", "fly", show="strength >= 100 and intelligence >= 100")
 
-    dp_period("Afternoon", "afternoon_act")
+    dp_period("Tarde", "afternoon_act")
     dp_choice("Study", "study")
     dp_choice("Hang Out", "hang")
 
-    dp_period("Evening", "evening_act")
+    dp_period("Anochecer", "evening_act")
     dp_choice("Exercise", "exercise")
     dp_choice("Play Games", "play")
 
@@ -91,19 +91,14 @@ label start:
     show Laura Normal Close Eyes
     "Esta blonda pesadilla de voz estridente es Laura, nos conocemos desde niños"
     show Laura Normal Close  
-    "Su belleza es directamente proporcional a su capacidad de irritar al objetivo durante una conversación ..."
-    show Laura Normal Close Eyes
-    "basicamente lo que trato de decir es que innegablemente bella, asi como molesta ..."
-    show Laura Normal Close
-    "10 años de conocerla hacen que te quedes con lo último"
-    show Laura Normal Close Eyes    
-    pj "Aqui se termina mi suerte ..."
-    show Laura Normal Close
-    pj "¿Puedo saber por que alteras mi paz, esbirro del infierno?"
-    show Laura Normal Close Eyes
+    "Su belleza es directamente proporcional a su capacidad de irritar al objetivo durante una conversación ..."    
+    "basicamente lo que trato de decir es que innegablemente bella, asi como molesta ..."    
+    "10 años de conocerla hacen que te quedes con lo último"        
+    pj "Aqui se termina mi suerte ..."    
+    pj "¿Puedo saber por que alteras mi paz, esbirro del infierno?"    
     "Olvide agregar que su sentido del humor es practicamente inexistente"
-    show Laura Normal Close
-    "...."
+    
+    
     
 
 
@@ -120,7 +115,7 @@ label day:
     # We may also want to compute the name for the day here, but
     # right now we don't bother.
 
-    "It's day %(day)d."
+    "Hoy es el día %(day)d."
 
     # Here, we want to set up some of the default values for the
     # day planner. In a more complicated game, we would probably
@@ -131,21 +126,21 @@ label day:
     $ morning_act = None
     $ afternoon_act = None
     $ evening_act = None
-    $ narrator("What should I do today?", interact=False)
+    $ narrator("Un dia más...¿Qué debería hacer Hoy?", interact=False)
     window show
     
 
     # Now, we call the day planner, which may set the act variables
     # to new values. We call it with a list of periods that we want
     # to compute the values for.
-    call screen day_planner(["Morning", "Afternoon", "Evening"])
+    call screen day_planner(["Mañana", "Tarde", "Anochecer"])
     window auto
     
     # We process each of the three periods of the day, in turn.
 label morning:
 
     # Tell the user what period it is.
-    centered "Morning"
+    centered "Mañana"
 
     # Set these variables to appropriate values, so they can be
     # picked up by the expression in the various events defined below. 
@@ -168,7 +163,7 @@ label afternoon:
 
     # The rest of this is the same as for the morning.
 
-    centered "Afternoon"
+    centered "Tarde"
 
     $ period = "afternoon"
     $ act = afternoon_act
@@ -182,7 +177,7 @@ label evening:
     if check_skip_period():
         jump night
 
-    centered "Evening"
+    centered "Anochecer"
 
     $ period = "evening"
     $ act = evening_act
@@ -196,9 +191,9 @@ label night:
     # events can be run. We put some boilerplate end-of-day text
     # in here.
 
-    centered "Night"
+    centered "Noche"
 
-    "It's getting late, so I decide to go to sleep."
+    "Se hizo muy tarde, creo que iré a dormir."
 
     # We call events_end_day to let it know that the day is done.
     call events_end_day
