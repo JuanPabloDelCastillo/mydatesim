@@ -37,24 +37,41 @@ image bg_bedroom = im.Scale("backgrounds/bedroom.jpg", 1066, 600)
 
 init python:
     
-    register_stat("Strength", "strength", 10, 100)
-    register_stat("Intelligence", "intelligence", 10, 100)
+    register_stat("Energia", "energy", 100, 100)
+    register_stat("Fuerza", "strength", 0, 100)
+    register_stat("Inteligencia", "intelligence", 0, 100)    
+    register_stat("Carisma", "charm", 0, 100)
+    register_stat("Felicidad", "happyness", 0, 100)
+    # register_stat("Felicidad1", "happyness1", 0, 100)
+    # register_stat("Felicidad2", "happyness2", 0, 100)
+    # register_stat("Felicidad3", "happyness3", 0, 100)
+    # register_stat("Felicidad4", "happyness4", 0, 100)
+    # register_stat("Felicidad5", "happyness5", 0, 100)
+    # register_stat("Felicidad6", "happyness6", 0, 100)
+    # register_stat("Felicidad7", "happyness7", 0, 100)
+    # register_stat("Felicidad8", "happyness8", 0, 100)
+    # register_stat("Felicidad9", "happyness9", 0, 100)
+    # register_stat("Felicidad11", "happyness11", 0, 100)
+    # register_stat("Felicidad12", "happyness12", 0, 100)
+    # register_stat("Felicidad13", "happyness13", 0, 100)
+    # register_stat("Felicidad14", "happyness14", 0, 100)
+
     register_stat("Relaxation", "relaxation", hidden=True)
 
     dp_period("Mañana", "morning_act")
-    dp_choice("Attend Class", "class")
-    dp_choice("Cut Class", "cut")
+    dp_choice("Ir a clases", "class")
+    dp_choice("Faltar a clases", "cut")
     
     # This is an example of an event that should only show up under special circumstances
     dp_choice("Fly to the Moon", "fly", show="strength >= 100 and intelligence >= 100")
 
     dp_period("Tarde", "afternoon_act")
-    dp_choice("Study", "study")
-    dp_choice("Hang Out", "hang")
+    dp_choice("Estudiar", "study")
+    dp_choice("Salir a pasear", "hang")
 
     dp_period("Anochecer", "evening_act")
-    dp_choice("Exercise", "exercise")
-    dp_choice("Play Games", "play")
+    dp_choice("Hacer Ejercicio", "exercise")
+    dp_choice("Jugar videojuegos", "play")
 
 
     
@@ -71,18 +88,30 @@ label start:
     # The script here is run before any event.
     
 
-    "Los primeros rayos del sol anuncian la primavera\n estacion que vibra en consonancia con mi entrada en la madurez"
-
+    "Los primeros rayos del sol anuncian la primavera, estación que vibra en consonancia con mi entrada en la madurez"    
 
     python:
-        pjname = renpy.input("mi nombre es")
+        pjname = renpy.input("Antes que nada me presento, mi nombre es")
         pjname = pjname.strip()
 
         if not pjname:
-            renpy.input("{i} Ya que no elegiste nombre, yo te bautizo como el santo evangelio: {/i} {color=#30b6ea}Juan{/color}")
+            renpy.input("{i}Ya que no elegiste nombre, yo te bautizo como el santo evangelio: {/i} {color=#30b6ea}Juan{/color}")
             pjname = "Juan"
 
-    pj "Presiento que hoy será un dia especial, aunque no tengo como argumentarlo, quizás es solo el buen clima quien me carga de tanto optimismo"
+    menu:
+        "y me caracterizo por ser una persona:"
+
+        "Fuerte. (+20 de Fuerza)":
+            "Siento el espiritu de Hercules el dios de la fuerza fluir por mi cuerpo"
+            $ strength +=20
+        "Inteligente. (+20 de Inteligencia)":
+            "Siento el espiritu de Ceo el dios de la Inteligencia fluir por mi cuerpo"
+            $ intelligence +=20
+        "Carismática. (+20 de Carisma)":
+            "Siento el espiritu de Apolo el dios de la Belleza y Carisma fluir por mi cuerpo"
+            $ charm +=20
+
+    pj "Tengo la sensación que hoy será un dia especial, aunque no tengo como argumentarlo, quizás es solo el buen clima quien me carga de tanto optimismo"
     pj "el parque esta bastante cerca, es ahí hacia donde me dirijo"     
     
     show Laura Normal Close

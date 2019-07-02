@@ -9,9 +9,9 @@ style dayplanner_frame:
     yalign 0.0
     
 style dp_frame:
-    ypos 200
-    yanchor 0.0
-    xalign 0.5
+    ypos 100
+    xpos 80
+    yanchor 0.0    
     
 # Spacing betweeen the choices and the done button.    
 style dp_vbox:
@@ -32,6 +32,7 @@ style dp_label is label:
 # Center the label of each choice.
 style dp_label_text:
     text_align 0.5
+    size 14
     
 # Make each choice button the same size, and centered.
 style dp_button is button:
@@ -40,35 +41,45 @@ style dp_button is button:
     
 style dp_button_text:
     xalign 0.5
+    size 14
 
 style dp_choice_text:
     xalign 0.5
+    
     
 # Center the done button.
 style dp_done_button:
     xalign 0.5
     
 # Here you can change the style of any elements in the Stats screen you want.
-# Put a margin on the stats frame.
+# Put a margin on the stats frame. And Quit background with background none
 style dse_stats_frame:
-    xmargin 10
-    ymargin 5
+    xmargin 0
+    ymargin 0 
+    background None  
+   
     
 # Space between the label and the stats.
 style dse_stats_vbox:
     box_first_spacing 20
     
-# Put blank space around each stat name, and right-justify.
+# Put blank space around each stat name, and left-justify.
 style dse_stats_label:
-    xminimum 140
-    xalign 1.0
-    xmargin 5
+    xminimum 1
+    xalign 0.0
+    # xmargin 0
     
 # Put blank space around each stat value, and right-justify.
 style dse_stats_value_label:
-    xminimum 100
+    xminimum 1
     xalign 1.0
+    
     
 # Center the stat bar vertically.
 style dse_stats_bar:
     yalign 0.5
+
+style dse_stats_label_text:    
+    size 14
+    
+    

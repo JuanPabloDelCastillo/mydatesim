@@ -1,45 +1,17 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/dse-schedule.rpy", line 136, in script
-    call screen day_planner(["Mañana", "Tarde", "Noche"])
+  File "game/dse-schedule.rpy", line 165, in script
+    call screen day_planner(["Mañana", "Tarde", "Anochecer"])
   File "renpy/common/000statements.rpy", line 531, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/dse-day_planner.rpy", line 50, in execute
-    screen day_planner(periods):
-  File "game/dse-day_planner.rpy", line 50, in execute
-    screen day_planner(periods):
-  File "game/dse-day_planner.rpy", line 53, in execute
-    frame:
-  File "game/dse-day_planner.rpy", line 56, in execute
-    use display_planner(periods)
-  File "game/dse-day_planner.rpy", line 58, in execute
-    screen display_planner(periods):
-  File "game/dse-day_planner.rpy", line 58, in execute
-    screen display_planner(periods):
-  File "game/dse-day_planner.rpy", line 59, in execute
-    frame:
-  File "game/dse-day_planner.rpy", line 61, in execute
-    vbox:
-  File "game/dse-day_planner.rpy", line 63, in execute
-    hbox:
-  File "game/dse-day_planner.rpy", line 65, in execute
-    for p in periods:
-  File "game/dse-day_planner.rpy", line 66, in execute
-    vbox:
-  File "game/dse-day_planner.rpy", line 68, in execute
-    if p not in __periods:
-  File "game/dse-day_planner.rpy", line 69, in execute
-    $ raise Exception("Period %r was never defined." % p)
-  File "game/dse-day_planner.rpy", line 69, in <module>
-    $ raise Exception("Period %r was never defined." % p)
-Exception: Period u'Ma\xf1ana' was never defined.
+Exception: Could not find font u'impact.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/dse-schedule.rpy", line 136, in script
-    call screen day_planner(["Mañana", "Tarde", "Noche"])
+  File "game/dse-schedule.rpy", line 165, in script
+    call screen day_planner(["Mañana", "Tarde", "Anochecer"])
   File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\ast.py", line 1947, in execute
     self.call("execute")
   File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\ast.py", line 1935, in call
@@ -52,55 +24,71 @@ Full traceback:
     rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\ui.py", line 295, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 2701, in interact
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 2699, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 3093, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\screen.py", line 430, in visit_all
-    callback(self)
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 3093, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/dse-day_planner.rpy", line 50, in execute
-    screen day_planner(periods):
-  File "game/dse-day_planner.rpy", line 50, in execute
-    screen day_planner(periods):
-  File "game/dse-day_planner.rpy", line 53, in execute
-    frame:
-  File "game/dse-day_planner.rpy", line 56, in execute
-    use display_planner(periods)
-  File "game/dse-day_planner.rpy", line 58, in execute
-    screen display_planner(periods):
-  File "game/dse-day_planner.rpy", line 58, in execute
-    screen display_planner(periods):
-  File "game/dse-day_planner.rpy", line 59, in execute
-    frame:
-  File "game/dse-day_planner.rpy", line 61, in execute
-    vbox:
-  File "game/dse-day_planner.rpy", line 63, in execute
-    hbox:
-  File "game/dse-day_planner.rpy", line 65, in execute
-    for p in periods:
-  File "game/dse-day_planner.rpy", line 66, in execute
-    vbox:
-  File "game/dse-day_planner.rpy", line 68, in execute
-    if p not in __periods:
-  File "game/dse-day_planner.rpy", line 69, in execute
-    $ raise Exception("Period %r was never defined." % p)
-  File "game/dse-day_planner.rpy", line 69, in <module>
-    $ raise Exception("Period %r was never defined." % p)
-Exception: Period u'Ma\xf1ana' was never defined.
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 3191, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\core.py", line 2091, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 546, in renpy.display.render.render_screen
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\screen.py", line 675, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 1127, in render
+    st, at)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 1127, in render
+    st, at)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 925, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 455, in render
+    renders = [ render(i, renwidth, renheight, st, at) for i in children ]
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\display\layout.py", line 1127, in render
+    st, at)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\text.py", line 1989, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\text.py", line 619, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\text.py", line 242, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\font.py", line 699, in get_font
+    face = load_face(fn)
+  File "F:\Programas\Renpy\renpy-6.99.12.3-sdk\renpy\text\font.py", line 640, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font u'impact.ttf'.
 
 Windows-8-6.2.9200
-Ren'Py 7.3.0.271
+Ren'Py 7.3.1.311
 Dating Sim Engine 4.0
-Sun Jun 30 21:28:17 2019
+Mon Jul 01 23:57:21 2019

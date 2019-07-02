@@ -52,7 +52,7 @@ screen day_planner(periods):
     $ renpy.choice_for_skipping()
     frame:
         style "dayplanner_frame"          
-        use display_stats(name=True, bar=True, value=True, max=True)
+        use display_stats(name=True, bar=True, value=False, max=False)
         use display_planner(periods)
             
 screen display_planner(periods):            

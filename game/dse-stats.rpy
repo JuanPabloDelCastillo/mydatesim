@@ -65,13 +65,13 @@ screen display_stats(name=True, bar=True, value=True, max=True):
     frame:
         style_group "dse_stats"        
         yalign 0.0
-        xalign 0.5
+        xalign 1.0
 
 
         vbox:
             yalign 0.0
-            xalign 0.5
-            label "Statistics" xalign 0.5
+            xalign 1.0
+            # label "Estadísticas" xalign 0.0 //hidden by jp
 
             # Depending on what the user chooses to display, calculate how many columns we need
             $ num_columns = 0
@@ -84,9 +84,9 @@ screen display_stats(name=True, bar=True, value=True, max=True):
                         
             # Make a grid with up to 3 columns and as many rows as there are stats.
             grid num_columns dse_stat_length:
-                xalign 0.5
+                xalign 1.0
                 yalign 0.5
-                spacing 5
+                spacing 1                
                 
                 for s in __dse_stats:
                     #Skip if the stat is a hidden stat
@@ -95,7 +95,7 @@ screen display_stats(name=True, bar=True, value=True, max=True):
     
                             
                         if name:
-                            label s.name
+                            label s.name xalign 1.0 xmargin 5
                         
                         if bar:
                             bar value v range s.max xmaximum 150 xalign 0.0

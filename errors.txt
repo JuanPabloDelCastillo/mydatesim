@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/dse-schedule.rpy", line 21: indentation mismatch.
+File "game/dse-stats.rpy", line 75: u'color' is not a keyword argument or valid child for the vbox statement.
+    color "#f00"            
+         ^
 
-Ren'Py Version: Ren'Py 7.0.0.196
-Thu Aug 23 01:33:55 2018
+Ren'Py Version: Ren'Py 7.3.1.311
+Mon Jul 01 02:51:44 2019
