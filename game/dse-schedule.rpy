@@ -29,7 +29,7 @@ image Laura Normal Stand = im.Scale("LaurenCasualStandNormal.png", 302, 640)
 
 
 # Background Images define here
-image bg space = "backgrounds/space.jpg"
+image bg space = im.Scale("backgrounds/space.jpg",1066, 600)
 image bg sky = "backgrounds/sky.jpg"
 image bg_bedroom = im.Scale("backgrounds/bedroom.jpg", 1066, 600)
 
@@ -83,13 +83,22 @@ label start:
     $ day = 0
 
     # Show a default background.
-    scene bg sky
+    scene bg space
 
     # The script here is run before any event.
+    "Es el año 2023"
+    "La sonda New Horizons III ha entrado en contacto con Proxima B, en el Sistema Alpha di Centauri, un planeta en la zona habitable, tal como nuestra Tierra"
+    "Entonces ha ocurrido lo poco probable, la sonda detecto emisiones de carbono, eso significa una cosa... Vida. Muchas vidas de hecho"
+    "Se formó un comitté de urgencia de Naciones Unidas, esto excedia a cualquier pais"
+    "El 12 de Octubre del 2023 anunciaron la noticia al mundo, no estabamos solos en el universo... Esto fue solo el pre-ambulo, tambien se anunciaron un paquete de medidas"
+    "Paquete de medidas que revolucionaron la sociedad mundial"
+    "Y aqui es donde comienza mi historia, la historia de probablemente el tipo mas común del planeta."
     
-
+    scene bg sky
+    with fade
+    
     "Los primeros rayos del sol anuncian la primavera, estación que vibra en consonancia con mi entrada en la madurez"    
-
+    
     python:
         pjname = renpy.input("Antes que nada me presento, mi nombre es")
         pjname = pjname.strip()
